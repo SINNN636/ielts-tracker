@@ -1,88 +1,133 @@
-# IELTS TRACKER
+# 🎯 IELTS TRACKER · 雅思备考追踪系统
 
-A personal IELTS study dashboard — 12-week plan, daily check-in, vocabulary book
-(刘洪波《雅思词汇真经》22 章 3674 词), error notebook, mock test log, and analytics.
+> 一个**零依赖、完全在浏览器本地运行**的雅思备考追踪工具。
+> 数据存在你自己的浏览器里，不上传任何服务器，不注册账号。
 
-Everything runs in the browser. No backend, no tracking, no accounts.
+[🌐 在线预览](https://你的用户名.github.io/ielts-tracker/) · [📖 使用说明](#-30-秒上手) · [⚙️ 配置](#-配置)
 
-## Features
+---
 
-- **Dashboard** — countdown to exam, streak, today's progress, skill heatmap, weekly
-  trend charts.
-- **Phase Plan** — three training phases (基础 / 强化 / 冲刺) mapped onto the
-  12-week timeline, with goal lines per skill.
-- **Daily Check-in** — log minutes spent on 8 training categories, capture the
-  hardest problem of the day.
-- **Vocabulary Book** — 22-chapter word list with three modes:
-  - **Browse** (词组视图 / 单词列表) — read words, examples, mastery pills
-  - **Search** — filter by word, meaning, example, or part of speech
-  - **Typing** (跟打练习) — recall + spell words from your collection
-- **Error Notebook** — log wrong answers by subject/section, track patterns
-- **Mock Test** — record L/R/W/S scores after each full practice test
-- **Analytics** — streak, completion, category distribution, score trends
-- **Topic Library** — bubble-map index of all IELTS topics across 8 themes
+## ✨ 它能做什么
 
-## Quick start
+| 模块 | 功能 |
+| --- | --- |
+| 📊 **仪表板** | 考试倒数日 · 连续打卡 · 今日完成度 · 四科雷达图 · 本周时间柱状图 |
+| 🎯 **阶段计划** | 自定义阶段（默认 4 个），含任务清单与目标分 |
+| ✅ **每日打卡** | 8 项训练项目（听 / 说 / 读 / 写 / 词 / 题 / 测 / 复盘），记录"今天最难的问题" |
+| 📖 **词汇库** | 《雅思词汇真经》22 章 3674 词，支持浏览 / 搜索 / 跟打练习 |
+| 📝 **单词本** | 自定义词汇、4 级掌握度（生词→认识→熟悉→掌握）、闪卡模式 |
+| 🎪 **话题库** | 8 大话题分类（教育 / 环境 / 科技 …），气泡图索引 |
+| 📕 **错题本** | 按题型分类（L1-L5 / R1-R5），追踪错误模式 |
+| 🧪 **模考记录** | 记录 L / R / W / S 单项分与总成绩，看趋势 |
+| 📈 **数据分析** | 30 天趋势、任务达成率、问题分布、词汇增长曲线 |
+| ⚙️ **设置** | 考试日期 · 目标分 · 训练项自定义 · 数据导入导出 |
 
-Just open `index.html` in any modern browser. Or serve it locally:
+---
 
-```bash
-python -m http.server 8080
-# then visit http://localhost:8080
+## 🖼️ 预览
+
+> 📷 **截图待补充** — 你将来想加截图时：
+> 1. 把图片放到 `screenshots/` 目录（如 `screenshots/dashboard.png`）
+> 2. 在下面取消注释对应行
+>
+> ```markdown
+> ![仪表板](screenshots/dashboard.png)
+> ![阶段计划](screenshots/phases.png)
+> ![词汇库](screenshots/vocab.png)
+> ```
+
+---
+
+## 🚀 30 秒上手
+
+### 1️⃣ 打开网页
+
+直接访问你的 GitHub Pages 链接：
+
+```
+https://你的用户名.github.io/ielts-tracker/
 ```
 
-## Data
+### 2️⃣ 首次设置
 
-All data lives in your browser's `localStorage` under the key
-`ielts-tracker-v1`. Nothing is sent to any server. Use **Settings → 数据管理**
-to export, import, or wipe your data.
+首次进入会在顶部看到提示条 **👋 首次使用？去设置**
 
-- **Export** — downloads a JSON file with every entry (days, vocab, errors, mocks)
-- **Import** — restores a previously exported JSON
-- **Clear all data** — wipes localStorage and reloads
+- 进入 **设置** 页面
+- 填写 **考试日期**（驱动倒数日、阶段进度、热力图）
+- 填写 **目标分数**（Overall，通常 6.5 / 7.0 / 7.5 / 8.0）
+- 勾选要追踪的 **训练项目**（每项可设每日目标）
 
-## Deploying to GitHub Pages
+### 3️⃣ 开始打卡
 
-1. Push the contents of this folder to a repo.
-2. Settings → Pages → Branch: `main` / root.
-3. Visit `https://<user>.github.io/<repo>/`.
+- 每天进 **✅ 每日打卡**，如实填写各项训练时间
+- 记录"今天最难的问题"——日后回顾能看清成长轨迹
+- 数据自动存进浏览器 `localStorage`，**关闭网页也不丢**
 
-That's it. No build step, no dependencies.
+---
 
-## Files
+## 💾 数据存储与迁移
 
-| File | Purpose |
-| --- | --- |
-| `index.html` | The full app (HTML + CSS + JS in one file, no build step) |
-| `vocab-book.js` | 22-chapter IELTS vocabulary (刘洪波《雅思词汇真经》) |
-| `README.md` | This file |
+| 操作 | 入口 | 说明 |
+| --- | --- | --- |
+| 📤 **导出** | 设置 → 数据管理 → 导出 | 下载 JSON 备份文件 |
+| 📥 **导入** | 设置 → 数据管理 → 导入 | 恢复之前的备份 |
+| 🗑️ **清空** | 设置 → 数据管理 → 清空全部 | 一键重置（不可恢复） |
 
-## Configuration
+数据存储位置：浏览器 `localStorage`，键名 `ielts-tracker-v1`。
+**注意**：换浏览器 / 清缓存 = 数据丢失，请定期导出备份。
 
-On first launch the dashboard shows a hint banner prompting you to fill in:
+---
 
-- **Exam date** — drives the countdown (`days to go`), phase progress, and heatmap layout
-- **Target score** (Overall) — typically 6.5 / 7.0 / 7.5 / 8.0
-- **Training items** — tick which daily training categories you want to track
-  (each with a custom daily target)
+## 🌐 部署到 GitHub Pages
 
-All of these live under **设置** (Settings). Once you set the exam date, the
-hero banner automatically swaps from a generic label to your actual date
-(e.g. `2026.12.03 雅思机考`).
+1. 把本目录所有文件上传到一个 GitHub 仓库（Public）
+2. 仓库 → **Settings** → **Pages**
+3. **Source**: Deploy from a branch · **Branch**: `main` / `(root)` → Save
+4. 等待 1–2 分钟，访问 `https://你的用户名.github.io/<仓库名>/`
 
-## Customizing the look
+完整图文教程见 [如何部署](#)。
 
-The two accent colors are CSS variables at the top of `index.html`:
+---
+
+## 🎨 自定义外观
+
+页面顶部的 CSS 变量控制主色与背景，改一处全站跟随：
 
 ```css
---bg-page  /* page background */
---accent   /* primary accent (used for buttons, charts, today) */
+:root {
+  --bg-page: #C9D3D3;   /* 页面背景 */
+  --accent:  #D10047;   /* 主强调色（按钮 / 图表 / 今天） */
+  /* 其他微调变量见 index.html 顶部 :root */
+}
 ```
 
-Change them once and the whole UI follows.
+---
 
-## Credits
+## 🧩 技术栈
 
-- Vocabulary content: 刘洪波《雅思词汇真经》(22 chapters, 3674 words)
-- Built with vanilla HTML/CSS/JS, [Chart.js](https://www.chartjs.org/) (CDN), and
-  a lot of ☕.
+- **HTML + CSS + 原生 JavaScript**（无构建步骤、无 npm）
+- **Chart.js 4.x**（CDN 加载，画所有图表）
+- **localStorage**（数据持久化）
+- **vocab-book.js**（《雅思词汇真经》22 章词组数据）
+
+不收集任何用户数据，没有后端，没有第三方追踪。
+
+---
+
+## 🙏 致谢
+
+- 📚 词汇数据来源：刘洪波《雅思词汇真经》
+- 📊 图表库：[Chart.js](https://www.chartjs.org/)
+- 🍜 还有一碗越南河粉
+
+---
+
+## 📜 许可
+
+MIT — 自由使用、修改、再发布。如果对你有帮助，欢迎点 ⭐！
+
+---
+
+<p align="center">
+  <sub>雅思备考不易，祝你早日上岸 🦆</sub>
+</p>
