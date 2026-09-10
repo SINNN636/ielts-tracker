@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>雅思备考追踪系统 · 12.3 冲刺 8.5</title>
+<title>IELTS Tracker · 雅思备考追踪</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <style>
   :root{
@@ -425,7 +425,7 @@
         <div class="tile purple">
           <div class="l">距考试</div>
           <div class="v" id="mExam">84</div>
-          <div class="d">天 · 12.3</div>
+          <div class="d" id="mExamSub">天</div>
         </div>
       </div>
 
@@ -854,7 +854,7 @@
         <h3>考试信息</h3>
         <div class="grid-2">
           <div><label>考试日期</label><input type="date" id="setExamDate" value=""></div>
-          <div><label>目标分数（Overall）</label><input type="number" id="setTarget" min="0" max="9" step="0.5" value="8.5"></div>
+          <div><label>目标分数（Overall）</label><input type="number" id="setTarget" min="0" max="9" step="0.5" value="8.0"></div>
         </div>
       </div>
 
@@ -1186,6 +1186,7 @@ function renderDashboard(){
   document.getElementById('mToday').textContent = tc+'%';
   document.getElementById('mTodaySub').textContent = tc===0 ? '尚未打卡' : (tc<50?'部分完成':'良好');
   document.getElementById('mExam').textContent = daysLeft===null ? '未设置' : daysLeft;
+  document.getElementById('mExamSub').textContent = daysLeft===null ? '请在设置中填写' : '天 · '+ymd(new Date(S.examDate)).slice(5).replace('-','/');
 
   // 首次使用引导：当考试日期/目标分数未设置时，在仪表板顶部显示提示条
   const hint = document.getElementById('firstRunHint');
@@ -2414,3 +2415,4 @@ go('dashboard');
 
 </body>
 </html>
+fix: 清理标题中的个人数据
