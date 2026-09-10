@@ -26,15 +26,32 @@
 
 ## 🖼️ 预览
 
-> 📷 **截图待补充** — 你将来想加截图时：
-> 1. 把图片放到 `screenshots/` 目录（如 `screenshots/dashboard.png`）
-> 2. 在下面取消注释对应行
->
-> ```markdown
-> ![仪表板](screenshots/dashboard.png)
-> ![阶段计划](screenshots/phases.png)
-> ![词汇库](screenshots/vocab.png)
-> ```
+<table>
+  <tr>
+    <td width="50%"><img src="screenshots/01-dashboard.png" alt="仪表板"><br><sub>📊 <b>仪表板</b> — 倒数日 · 连续打卡 · 四科雷达图 · 本周时间</sub></td>
+    <td width="50%"><img src="screenshots/02-phases.png" alt="阶段计划"><br><sub>🎯 <b>阶段计划</b> — 自定义阶段 · 任务清单 · 进度时间线</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="screenshots/03-checkin.png" alt="每日打卡"><br><sub>✅ <b>每日打卡</b> — 训练记录 · 今日最大问题 · 打卡贡献</sub></td>
+    <td width="50%"><img src="screenshots/04-checkin-todos.png" alt="今日待办"><br><sub>🗒️ <b>今日待办</b> — 每项训练的目标与完成量</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="screenshots/05-vocabulary.png" alt="词汇库"><br><sub>📖 <b>词汇库</b> — 22 章 3674 词 · 章节进度</sub></td>
+    <td width="50%"><img src="screenshots/06-vocabulary-chapter.png" alt="词汇章节"><br><sub>🔤 <b>词汇章节</b> — 词组 / 释义 / 例句 / L1-L4 掌握度</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="screenshots/07-wordbook.png" alt="单词本"><br><sub>📝 <b>单词本</b> — 4 级掌握度 · 分类统计 · 闪卡模式</sub></td>
+    <td width="50%"><img src="screenshots/08-topics.png" alt="话题库"><br><sub>🎪 <b>话题库</b> — 8 大话题 · 覆盖雷达图 · 核心词</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="screenshots/09-errors.png" alt="错题本"><br><sub>📕 <b>错题本</b> — L1-L5 / R1-R5 分类 · 错误模式追踪</sub></td>
+    <td width="50%"><img src="screenshots/10-mock-tests.png" alt="模考记录"><br><sub>🧪 <b>模考记录</b> — L/R/W/S 单项分 · 分数趋势</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="screenshots/11-analytics.png" alt="数据分析"><br><sub>📈 <b>数据分析</b> — 30 天趋势 · 时间占比 · 达成率</sub></td>
+    <td width="50%"><img src="screenshots/12-settings.png" alt="设置"><br><sub>⚙️ <b>设置</b> — 考试日期 · 目标分 · 数据导入导出</sub></td>
+  </tr>
+</table>
 
 ---
 
@@ -131,4 +148,3 @@ MIT — 自由使用、修改、再发布。如果对你有帮助，欢迎点 �
 <p align="center">
   <sub>雅思备考不易，祝你早日上岸 🦆</sub>
 </p>
-update: add screenshots
