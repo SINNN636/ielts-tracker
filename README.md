@@ -131,3 +131,4 @@ MIT — 自由使用、修改、再发布。如果对你有帮助，欢迎点 �
 <p align="center">
   <sub>雅思备考不易，祝你早日上岸 🦆</sub>
 </p>
+update: add screenshots
