@@ -3,7 +3,7 @@
 > 一个**零依赖、完全在浏览器本地运行**的雅思备考追踪工具。
 > 数据存在你自己的浏览器里，不上传任何服务器，不注册账号。
 
-[🌐 在线预览](https://你的用户名.github.io/ielts-tracker/) · [📖 使用说明](#-30-秒上手) · [⚙️ 配置](#-配置)
+[🌐 在线预览](https://SINNN636.github.io/ielts-tracker/) · [📖 使用说明](#-30-秒上手) · [⚙️ 配置](#-配置)
 
 ---
 
@@ -62,7 +62,7 @@
 直接访问你的 GitHub Pages 链接：
 
 ```
-https://你的用户名.github.io/ielts-tracker/
+https://SINNN636.github.io/ielts-tracker/
 ```
 
 ### 2️⃣ 首次设置
