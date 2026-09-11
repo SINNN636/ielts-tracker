@@ -2325,7 +2325,7 @@ function renderSettings(){
       if(f){ f.target = +i.value||f.target; S.fields = FIELDS; save(); }
     };
   });
-  document.getElementById('dataInfo').textContent = `已记录 ${Object.keys(S.days).length} 天 · 词本 ${S.vocab.length} 词 · 错题 ${(S.errors||[]).length} · 模考 ${(S.mocks||[]).length}`;
+  document.getElementById('dataInfo').textContent = `词本 ${S.vocab.length} 词 · 错题 ${(S.errors||[]).length} · 模考 ${(S.mocks||[]).length}`;
 }
 
 /* ============================================================
@@ -2369,7 +2369,7 @@ document.getElementById('saveDayBtn').onclick = saveCk;
 document.getElementById('clearDayBtn').onclick = ()=>{
   if(!confirm('清空当日记录？此操作会从总天数统计中移除当天。')) return;
   const k = ymd(ckCur);
-  // 真正删除当天键，而不只是替换为空对象，这样设置页"已记录天数"才会递减
+  // 真正删除当天键，热力图与数据导出都不会再残留空记录
   if(S.days[k]) delete S.days[k];
   renderCheckin(); flash('已清空');
 };
